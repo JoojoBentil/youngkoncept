@@ -8,7 +8,11 @@
   }
   
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-text-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-heading;
   }
 }
 

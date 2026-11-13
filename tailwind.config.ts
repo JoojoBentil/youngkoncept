@@ -9,17 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#eab308',
-          600: '#ca8a04',
-          700: '#a16207',
-          800: '#854d0e',
-          900: '#713f12',
+        primary: {
+          DEFAULT: '#A9CF46',
+          light: '#B8D96A',
+          dark: '#8FB32E',
+        },
+        secondary: {
+          DEFAULT: '#A7CD49',
+          light: '#B6D86D',
+          dark: '#8FB331',
+        },
+        text: {
+          heading: '#FFFFFF',
+          body: '#D9D9D9',
         },
       },
       fontFamily: {

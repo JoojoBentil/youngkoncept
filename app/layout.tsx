@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "YOUNGKONCEPT | Professional Photography in Accra",
-  description: "We Capture Moments That Matter - Professional Photography Services in Accra, Ghana. Portrait, Wedding, Birthday, Graduation & Fashion Photography.",
-  keywords: "photography, Accra, Ghana, portrait, wedding, birthday, graduation, fashion, photographer",
+  title: "YOUNGKONCEPT | Photography, Videography & Branding in Accra",
+  description: "We create to inspire - Ghana's fastest-growing integrated Photography & Communications company. Photography, Videography, Graphic Design, Printing, Branding, Event Coverage & Social Media Strategy in Accra, Ghana.",
+  keywords: "photography, videography, branding, graphic design, printing, Accra, Ghana, wedding, event coverage, social media strategy, digital offset printing",
 };
 
 export default function RootLayout({

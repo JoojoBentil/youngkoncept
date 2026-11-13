@@ -30,9 +30,9 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">
-          What Our <span className="text-gold-400">Clients Say</span>
+          What Our <span className="text-primary">Clients Say</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-text-body mb-12 max-w-2xl mx-auto">
           Don&apos;t just take our word for it—hear from those who have experienced our work
         </p>
 
@@ -40,7 +40,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-zinc-900 rounded-lg p-8 border border-zinc-800 hover:border-gold-500 transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-zinc-900 rounded-lg p-8 border border-zinc-800 hover:border-primary transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
@@ -52,17 +52,17 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">{testimonial.name}</h3>
-                  <p className="text-gold-400 text-sm">{testimonial.role}</p>
+                  <p className="text-primary text-sm">{testimonial.role}</p>
                 </div>
               </div>
 
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i} className="text-gold-400 text-xl">★</span>
+                  <span key={i} className="text-primary text-xl">★</span>
                 ))}
               </div>
 
-              <p className="text-gray-300 leading-relaxed italic">
+              <p className="text-text-body leading-relaxed italic">
                 &quot;{testimonial.text}&quot;
               </p>
             </div>

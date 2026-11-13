@@ -1,19 +1,33 @@
-# YOUNGKONCEPT - Photography Portfolio Website
+# YOUNGKONCEPT - Photography, Videography & Communications
 
-A modern, elegant, and professional photography portfolio website built with Next.js and Tailwind CSS.
+A modern, professional website for YOUNGKONCEPT - Ghana's fastest-growing integrated Photography & Communications company.
 
-## 🚀 Features
+## 🚀 About YOUNGKONCEPT
 
-- **Stunning Hero Section** - Eye-catching introduction with brand name and call-to-action
-- **Interactive Photo Gallery** - 9 high-quality images with category filtering (Portrait, Wedding, Birthday, Graduation, Fashion)
-- **About Section** - Professional introduction to the photography brand
-- **Services & Pricing** - Clear display of photography packages and pricing
-- **Client Testimonials** - Showcase client reviews with ratings
-- **Booking Form** - Functional contact form with WhatsApp integration
-- **Responsive Design** - Optimized for mobile, tablet, and desktop
-- **Black & Gold Theme** - Luxurious color scheme
-- **SEO Optimized** - Meta tags and semantic HTML
-- **Performance Focused** - Next.js Image optimization and lazy loading
+We Energize the brands of our clients to ensure they get the maximum results and return on their investments!
+
+Young Koncept offers a full range of integrated communications and creative services including:
+- Photography & Videography
+- Graphic Design & Branding
+- Digital & Large Format Printing
+- Social Media Strategy & Execution
+- Event Coverage & Planning
+
+**Tagline:** *"Whatever it takes"*
+
+## 🌟 Features
+
+- **Stunning Hero Section** - Brand introduction with professional tagline
+- **Interactive Photo Gallery** - Filterable gallery with category options and lightbox preview
+- **About Section** - Company story and value proposition
+- **Mission & Values** - TARGET, ENGAGE, MEASURE, INTEGRATE framework
+- **Comprehensive Services** - 8 service categories showcasing all offerings
+- **Client Testimonials** - Social proof with client reviews
+- **Contact Form** - Functional booking form with WhatsApp integration
+- **Full Contact Information** - Phone numbers, email, and physical address
+- **Responsive Design** - Optimized for all devices
+- **Black & Gold Theme** - Professional, luxurious aesthetic
+- **SEO Optimized** - Complete meta tags and semantic HTML
 
 ## 🛠️ Tech Stack
 
@@ -39,39 +53,51 @@ npm run dev
 
 ## 🎨 Customization Guide
 
-### Update Contact Information
+### Update Photos
 
-Edit `components/BookingForm.tsx` and `components/Footer.tsx`:
-- Replace `233XXXXXXXXX` with your actual WhatsApp number
-- Update social media links (Instagram, TikTok)
-
-### Replace Photos
-
-Update image URLs in:
-- `components/Gallery.tsx` - Replace Unsplash URLs with your actual photos
+Replace image URLs in:
+- `components/Gallery.tsx` - Replace Unsplash URLs with your actual portfolio photos
 - `components/Hero.tsx` - Change hero background image
 - `components/About.tsx` - Update about section image
 
-### Update Pricing
+### Update Social Media Links
 
-Edit `components/Services.tsx` to modify:
-- Package prices
-- Service descriptions
-- Features included in each package
+Edit `components/Footer.tsx`:
+- Instagram: Update link to your Instagram profile
+- TikTok: Update link to your TikTok profile
+- WhatsApp links are already configured with the correct numbers
 
-### Change Colors
+### Services & Pricing
 
-Modify `tailwind.config.ts` to adjust the gold color palette or add new colors.
+Services are defined in `components/Services.tsx`. The current setup shows 8 services:
+1. Photography
+2. Videography
+3. Graphic Design
+4. Social Media Strategy
+5. Digital Offset Printing
+6. Large Format Print
+7. 3D Print & Varnish
+8. Branding & Animations
+
+Modify the `services` array to adjust descriptions, features, or add new services.
 
 ## 📱 Sections Overview
 
-1. **Hero Section** - Brand introduction with CTA button
-2. **Gallery** - Filterable photo gallery with lightbox preview
-3. **About** - Story and mission of Youngkoncept
-4. **Services & Pricing** - Four photography packages with detailed features
-5. **Testimonials** - Three client reviews with photos
-6. **Booking Form** - Contact form with WhatsApp integration
-7. **Footer** - Brand info, quick links, and social media
+1. **Hero Section** - YOUNGKONCEPT branding with "Whatever it takes" tagline
+2. **Gallery** - Filterable photo gallery (Portrait, Wedding, Birthday, Graduation, Fashion)
+3. **About** - Company story and mission statement
+4. **Mission & Values** - Four core values: TARGET, ENGAGE, MEASURE, INTEGRATE
+5. **Services** - 8 comprehensive service categories
+6. **Testimonials** - Three client reviews with 5-star ratings
+7. **Contact Form** - Booking form with WhatsApp quick contact
+8. **Footer** - Contact info, social links, and address
+
+## 📞 Contact Information
+
+- **Phone:** +233 247 852 210 / +233 508 316 156
+- **Email:** youngkoncept@gmail.com
+- **Address:** 2nd Floor, Nungua Beach Road (Cold Store), Near Zion Prayer Ministry, Accra, Ghana
+- **Website:** www.youngkoncept.com
 
 ## 🚀 Deployment
 
@@ -93,10 +119,8 @@ npm start
 
 © 2026 YOUNGKONCEPT. All rights reserved.
 
-## 🤝 Support
-
-For questions or support, contact YOUNGKONCEPT via WhatsApp or social media.
-
 ---
 
 **Based in Accra, Ghana 🇬🇭**
+
+*"We create to inspire"*

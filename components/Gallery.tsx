@@ -74,9 +74,9 @@ export default function Gallery() {
     <section id="gallery" className="py-20 px-4 bg-zinc-900">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">
-          Our <span className="text-gold-400">Portfolio</span>
+          Our <span className="text-primary">Portfolio</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-text-body mb-12 max-w-2xl mx-auto">
           Explore our diverse collection of photography work across various categories
         </p>
 
@@ -88,7 +88,7 @@ export default function Gallery() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? "bg-gold-500 text-black"
+                  ? "bg-secondary text-black"
                   : "bg-zinc-800 text-white hover:bg-zinc-700"
               }`}
             >
@@ -115,7 +115,7 @@ export default function Gallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4">
-                  <p className="text-gold-400 font-semibold">{image.category}</p>
+                  <p className="text-primary font-semibold">{image.category}</p>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function Gallery() {
               sizes="90vw"
             />
             <button
-              className="absolute top-4 right-4 text-white text-4xl hover:text-gold-400 transition-colors"
+              className="absolute top-4 right-4 text-white text-4xl hover:text-primary transition-colors"
               onClick={() => setSelectedImage(null)}
             >
               ×

@@ -39,26 +39,48 @@ export default function BookingForm() {
 
   const handleWhatsAppBooking = () => {
     const message = encodeURIComponent(
-      `Hello YOUNGKONCEPT! I'd like to book a photography session.\n\nName: ${formData.fullName || "N/A"}\nSession Type: ${formData.sessionType || "N/A"}\nPreferred Date: ${formData.preferredDate || "N/A"}\n\nMessage: ${formData.message || "N/A"}`
+      `Hello YOUNGKONCEPT! I'd like to book a photography session.\n\nName: ${formData.fullName || "N/A"}\nService Type: ${formData.sessionType || "N/A"}\nPreferred Date: ${formData.preferredDate || "N/A"}\n\nMessage: ${formData.message || "N/A"}`
     );
-    window.open(`https://wa.me/233XXXXXXXXX?text=${message}`, "_blank");
+    window.open(`https://wa.me/233247852210?text=${message}`, "_blank");
   };
 
   return (
     <section id="booking" className="py-20 px-4 bg-zinc-900">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">
-          Book Your <span className="text-gold-400">Session</span>
+          Contact <span className="text-primary">Us</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          Ready to capture your special moments? Fill out the form below or contact us directly on WhatsApp
+        <p className="text-center text-text-body mb-8 max-w-2xl mx-auto">
+          We will love to talk to you about your Photography, Branding, and Event Support Needs. We are directly reachable through WhatsApp and on call.
         </p>
+
+        {/* Contact Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center">
+            <div className="text-4xl mb-3">📞</div>
+            <h3 className="font-bold text-lg mb-2 text-primary">Call Us</h3>
+            <p className="text-text-body">+233 247 852 210</p>
+            <p className="text-text-body">+233 508 316 156</p>
+          </div>
+          
+          <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center">
+            <div className="text-4xl mb-3">📧</div>
+            <h3 className="font-bold text-lg mb-2 text-primary">Email Us</h3>
+            <p className="text-text-body break-all">youngkoncept@gmail.com</p>
+          </div>
+          
+          <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center">
+            <div className="text-4xl mb-3">📍</div>
+            <h3 className="font-bold text-lg mb-2 text-primary">Visit Us</h3>
+            <p className="text-text-body text-sm">2nd Floor, Nungua Beach Road (Cold Store), Near Zion Prayer Ministry, Accra</p>
+          </div>
+        </div>
 
         <div className="bg-zinc-800 rounded-lg p-8 border border-zinc-700">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium mb-2">
-                Full Name <span className="text-gold-400">*</span>
+                Full Name <span className="text-primary">*</span>
               </label>
               <input
                 type="text"
@@ -66,14 +88,14 @@ export default function BookingForm() {
                 required
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-gold-500 transition-colors"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
                 placeholder="Enter your full name"
               />
             </div>
 
             <div>
               <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                Phone Number <span className="text-gold-400">*</span>
+                Phone Number <span className="text-primary">*</span>
               </label>
               <input
                 type="tel"
@@ -81,34 +103,38 @@ export default function BookingForm() {
                 required
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-gold-500 transition-colors"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
                 placeholder="+233 XX XXX XXXX"
               />
             </div>
 
             <div>
               <label htmlFor="sessionType" className="block text-sm font-medium mb-2">
-                Type of Photography Session <span className="text-gold-400">*</span>
+                Service Required <span className="text-primary">*</span>
               </label>
               <select
                 id="sessionType"
                 required
                 value={formData.sessionType}
                 onChange={(e) => setFormData({ ...formData, sessionType: e.target.value })}
-                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-gold-500 transition-colors"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
               >
-                <option value="">Select a session type</option>
-                <option value="Portrait Shoot">Portrait Shoot - GH₵300</option>
-                <option value="Wedding Photography">Wedding Photography - GH₵1,500</option>
-                <option value="Birthday Photography">Birthday Photography - GH₵500</option>
-                <option value="Graduation Photography">Graduation Photography - GH₵400</option>
-                <option value="Fashion Photography">Fashion Photography - Custom Quote</option>
+                <option value="">Select a service</option>
+                <option value="Photography">Photography</option>
+                <option value="Videography">Videography</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Social Media Strategy">Social Media Strategy</option>
+                <option value="Digital Printing">Digital Printing</option>
+                <option value="Large Format Print">Large Format Print</option>
+                <option value="Branding">Branding</option>
+                <option value="Event Coverage">Event Coverage</option>
+                <option value="Other">Other - Please Specify</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="preferredDate" className="block text-sm font-medium mb-2">
-                Preferred Date <span className="text-gold-400">*</span>
+                Preferred Date <span className="text-primary">*</span>
               </label>
               <input
                 type="date"
@@ -116,7 +142,7 @@ export default function BookingForm() {
                 required
                 value={formData.preferredDate}
                 onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-gold-500 transition-colors"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
               />
             </div>
 
@@ -129,7 +155,7 @@ export default function BookingForm() {
                 rows={4}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-gold-500 transition-colors resize-none"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
                 placeholder="Tell us more about your requirements..."
               />
             </div>
@@ -144,7 +170,7 @@ export default function BookingForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 bg-gold-500 hover:bg-gold-600 disabled:bg-gold-700 text-black font-semibold py-4 rounded-lg transition-colors duration-300"
+                className="flex-1 bg-secondary hover:bg-primary disabled:bg-primary/50 text-black font-semibold py-4 rounded-lg transition-colors duration-300"
               >
                 {isSubmitting ? "Submitting..." : "Submit Booking Request"}
               </button>

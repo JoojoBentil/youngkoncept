@@ -3,36 +3,67 @@
 const services = [
   {
     id: 1,
-    title: "Portrait Shoot",
-    price: "GH₵300",
-    description: "Professional portrait photography that captures your personality and style.",
-    features: ["1-hour session", "15+ edited photos", "Indoor/outdoor options", "Professional lighting"],
-    icon: "👤"
+    title: "Photography",
+    description: "Professional photography for all occasions - portraits, events, corporate, product photography and more.",
+    features: ["Event Photography", "Corporate Photography", "Product Photography", "Portrait Sessions"],
+    icon: "📷",
+    category: "Visual"
   },
   {
     id: 2,
-    title: "Wedding Photography",
-    price: "GH₵1,500",
-    description: "Complete wedding day coverage preserving every precious moment.",
-    features: ["Full day coverage", "200+ edited photos", "Engagement shoot included", "Online gallery"],
-    icon: "💍",
-    popular: true
+    title: "Videography",
+    description: "Cinematic video production, editing, and post-production services for weddings, events, and corporate projects.",
+    features: ["Wedding Videos", "Event Coverage", "Video Editing", "Corporate Videos"],
+    icon: "🎥",
+    category: "Visual"
   },
   {
     id: 3,
-    title: "Birthday Photography",
-    price: "GH₵500",
-    description: "Celebrate your special day with beautiful birthday photography.",
-    features: ["3-hour coverage", "50+ edited photos", "Candid & posed shots", "Props available"],
-    icon: "🎂"
+    title: "Graphic Design",
+    description: "Creative graphic design solutions including branding, logos, and marketing materials.",
+    features: ["Branding & Logos", "Business Cards", "Brochures & Flyers", "Invitation Cards"],
+    icon: "🎨",
+    category: "Design"
   },
   {
     id: 4,
-    title: "Graduation Photography",
-    price: "GH₵400",
-    description: "Commemorate your academic achievements with professional photos.",
-    features: ["2-hour session", "30+ edited photos", "Cap & gown photos", "Family group shots"],
-    icon: "🎓"
+    title: "Social Media Strategy",
+    description: "Comprehensive social media planning, content creation, and campaign execution to grow your brand.",
+    features: ["Strategy Planning", "Content Creation", "Campaign Management", "Analytics & Reporting"],
+    icon: "📱",
+    category: "Digital"
+  },
+  {
+    id: 5,
+    title: "Digital Offset Printing",
+    description: "Ghana's first digital offset printing - high quality, fast turnaround, on-demand printing solutions.",
+    features: ["Business Cards", "Brochures", "Certificates", "Annual Reports"],
+    icon: "🖨️",
+    category: "Printing"
+  },
+  {
+    id: 6,
+    title: "Large Format Print",
+    description: "Advanced large format printing up to 1440dpi using Mimaki printers for banners, posters, and signage.",
+    features: ["Banners & Posters", "Vehicle Wraps", "Wall Graphics", "Outdoor Signage"],
+    icon: "📐",
+    category: "Printing"
+  },
+  {
+    id: 7,
+    title: "3D Print & Varnish",
+    description: "Premium 3D spot varnish, 3D gold and silver printing for luxury business cards and special materials.",
+    features: ["3D Spot Varnish", "Gold & Silver Print", "Premium Cards", "Luxury Finishes"],
+    icon: "✨",
+    category: "Premium"
+  },
+  {
+    id: 8,
+    title: "Branding & Animations",
+    description: "Complete branding solutions and animated content for digital marketing and brand identity.",
+    features: ["Brand Identity", "Animations", "Motion Graphics", "Logo Animation"],
+    icon: "🎬",
+    category: "Design"
   },
 ];
 
@@ -41,40 +72,32 @@ export default function Services() {
     <section id="services" className="py-20 px-4 bg-zinc-900">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">
-          Services & <span className="text-gold-400">Pricing</span>
+          Our <span className="text-primary">Services</span>
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          Choose the perfect photography package for your special occasion
+        <p className="text-center text-text-body mb-12 max-w-2xl mx-auto">
+          From photography to printing, we offer comprehensive creative and communication solutions
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service) => (
             <div
               key={service.id}
-              className={`relative bg-zinc-800 rounded-lg p-6 transition-all duration-300 hover:transform hover:scale-105 border-2 ${
-                service.popular
-                  ? "border-gold-500 shadow-lg shadow-gold-500/20"
-                  : "border-zinc-700 hover:border-gold-400"
-              }`}
+              className="bg-zinc-800 rounded-lg p-6 transition-all duration-300 hover:transform hover:scale-105 border-2 border-zinc-700 hover:border-primary"
             >
-              {service.popular && (
-                <div className="absolute -top-3 right-4 bg-gold-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </div>
-              )}
-              
               <div className="text-5xl mb-4">{service.icon}</div>
               
-              <h3 className="font-serif text-2xl font-bold mb-2">{service.title}</h3>
+              <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                {service.category}
+              </div>
               
-              <div className="text-gold-400 text-3xl font-bold mb-4">{service.price}</div>
+              <h3 className="font-serif text-xl font-bold mb-2">{service.title}</h3>
               
-              <p className="text-gray-400 text-sm mb-6">{service.description}</p>
+              <p className="text-text-body text-sm mb-4">{service.description}</p>
               
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, index) => (
-                  <li key={index} className="flex items-start text-sm text-gray-300">
-                    <span className="text-gold-400 mr-2">✓</span>
+                  <li key={index} className="flex items-start text-sm text-text-body">
+                    <span className="text-primary mr-2">✓</span>
                     {feature}
                   </li>
                 ))}
@@ -84,12 +107,29 @@ export default function Services() {
                 onClick={() => {
                   document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="w-full bg-gold-500 hover:bg-gold-600 text-black font-semibold py-3 rounded-lg transition-colors duration-300"
+                className="w-full bg-secondary hover:bg-primary text-black font-semibold py-2 rounded-lg transition-colors duration-300 text-sm"
               >
-                Book Now
+                Get Quote
               </button>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary/30 rounded-lg p-8 text-center">
+          <h3 className="font-serif text-2xl font-bold mb-4">
+            Need a <span className="text-primary">Custom Solution?</span>
+          </h3>
+          <p className="text-text-body mb-6">
+            We also offer custom packages tailored to your specific needs. Contact us to discuss your project requirements.
+          </p>
+          <button
+            onClick={() => {
+              document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="bg-secondary hover:bg-primary text-black font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
+          >
+            Contact Us Today
+          </button>
         </div>
       </div>
     </section>

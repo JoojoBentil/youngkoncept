@@ -18,20 +18,20 @@ export default function About() {
 
           <div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-              About <span className="text-gold-400">Youngkoncept</span>
+              About <span className="text-primary">Youngkoncept</span>
             </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p>
-                Welcome to <strong className="text-gold-400">YOUNGKONCEPT</strong>, where moments transform into timeless memories. Based in the vibrant heart of Accra, Ghana, we are a creative photography service dedicated to capturing the essence of life&apos;s most precious occasions.
+            <div className="space-y-4 text-text-body leading-relaxed">
+              <p className="text-primary font-semibold text-lg">
+                We Energize the brands of our clients to ensure they get the maximum results and return on their investments!
               </p>
               <p>
-                Our passion lies in telling your unique story through the lens. Whether it&apos;s the intimate beauty of a portrait, the joyous celebration of a wedding, the excitement of a birthday, the pride of graduation, or the elegance of fashion, we bring artistry and professionalism to every shoot.
+                <strong className="text-white">Young Koncept</strong> is one of the nation&apos;s fastest-growing independent integrated Photography & communications companies. We offer a full range of Integrated Communications and public relations services. From initial market research and strategic planning to editorial services, multimedia, blog & vlog consulting, social media strategy & execution, event planning, and more.
               </p>
               <p>
-                With years of experience and a keen eye for detail, we specialize in creating stunning visual narratives that you&apos;ll cherish forever. At YOUNGKONCEPT, we don&apos;t just take photos—we capture the emotions, the connections, and the moments that matter most to you.
+                Any business runs on a value proposition that benefits its customers. We help you define that value and communicate it to the people who matter — customers, prospects, influencers. We engage the people you must reach by driving your business&apos; workings to their best performance by encompassing all communications into crisp, focused, relevant messaging.
               </p>
-              <p className="text-gold-400 font-semibold italic">
-                Let us help you preserve your most beautiful moments with elegance and creativity.
+              <p className="text-primary font-semibold italic text-lg mt-6">
+                &quot;We create to inspire&quot;
               </p>
             </div>
           </div>

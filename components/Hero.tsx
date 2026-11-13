@@ -15,32 +15,46 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop"
           alt="Photography background"
           fill
-          className="object-cover"
+          className="object-cover opacity-20"
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
       </div>
 
       {/* Content */}
       <div className={`relative z-10 text-center px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-wider">
-          <span className="text-white">YOUNG</span>
-          <span className="text-gold-400">KONCEPT</span>
+        
+        {/* Brand Name */}
+        <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider mb-2">
+          <span className="text-primary">Y</span>
+          <span className="text-white">OUNG</span>
+          <span className="text-white text-3xl md:text-5xl lg:text-6xl align-top">®</span>
         </h1>
-        <p className="text-xl md:text-2xl lg:text-3xl text-gold-200 mb-8 font-light tracking-wide">
-          We Capture Moments That Matter
+        
+        {/* Subtitle */}
+        <div className="mb-6">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold tracking-[0.3em] text-white mb-4">
+            PHOTOGRAPHY
+          </h2>
+          <div className="h-px w-48 md:w-64 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-4"></div>
+        </div>
+
+        {/* Tagline */}
+        <p className="text-lg md:text-xl lg:text-2xl text-primary mb-8 font-light">
+          we create to inspire...
         </p>
+
+        {/* Call to Action */}
         <button
           onClick={scrollToBooking}
-          className="bg-gold-500 hover:bg-gold-600 text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gold-500/50"
+          className="bg-secondary hover:bg-primary text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/50"
         >
           Book a Session
         </button>
@@ -48,8 +62,8 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gold-400 rounded-full flex justify-center">
-          <div className="w-1.5 h-3 bg-gold-400 rounded-full mt-2"></div>
+        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+          <div className="w-1.5 h-3 bg-primary rounded-full mt-2"></div>
         </div>
       </div>
     </section>
